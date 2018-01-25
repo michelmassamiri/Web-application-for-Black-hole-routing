@@ -1,0 +1,26 @@
+---------------------------
+Compte rendu de td du 24/01
+---------------------------
+
+Mettre à jour le dépot avec le .tex, le compte rendu (à faire après chaque séance). Mettre le dépot à jour la veille de chaque td.
+
+Préciser avant td si besoin d'aborder un ou des point particuliers.
+
+Travailler la compréhension du sujet:
+-Avoir une bonne compréhension de chaque terme et technologie.
+-Définir avec précison route, BGP, communauté, RestFUL etc...
+
+Cahier des charges
+------------------
+
+Le cahier des charges/besoins doit nous guider
+
+Besoins fonctionnels:
+-Plus de détails
+-Possibilité de dépendances dans les besoins fonctionnels
+
+Diagramme d'utilisation:
+-Faire autant de scénario que néccessaires
+-Tout ce qui apparait dans les besoins fonctionnels doit apparaitre dans un diagramme d'utilisation
+
+Faire un diagramme UML pour la base de donnée.
