@@ -1,0 +1,55 @@
+\section{Cahier des Charges}
+Après avoir analysé les outils existants et aussi les besoins du client, on s'est rendu compte que le client aura besoin d'une application Web de type RESTful pour pouvoir interagir avec ExaBGP.
+\newline
+Par conséquent, notre application Web s'appuiera sur le framework Meteor JS. 
+
+\subsection{Besoins fonctionnels}
+
+\begin{itemize}
+\item Ajouter/Supprimer une route (admin) : 
+	\begin{itemize}
+		\item L'administrateur réseau peut annoncer un réseau ou une adresse IP.
+        \item L'administrateur réseau peut ainsi supprimer une adresse IP ou un réseau.
+        \item La possibilité d'attribuer une communauté à un router ou bien un réseau lors de l'ajout.
+        \item Les opérations de la suppression et de l'ajout seront réservées à l'administrateur de l'application.
+	\end{itemize}
+    
+\item Vérifier le bon fonctionnement ExaBGP (admin) :
+	\begin{itemize}
+		\item À l'aide d'un élément dynamique, l'administrateur peut observer l'état du ExaBGP avant de lancer des commandes.
+        \item Envoyer un message d'avertissement(popup)quand ExaBGP est en panne ou ne tourne pas.
+	\end{itemize}
+    
+\item Exécuter les différentes commandes de l'API de ExaBGP
+	\begin{itemize}
+		\item (Utiliser la technique du Black hole selon une source IP ou bien une destination) : expliquer ça à l'aide d'un UML de Séquence.
+        \item Les différentes commandes d'ExaBGP.
+	\end{itemize}	
+
+\item Relancer ExaBGP (admin)
+
+\item Rechercher des routes selon leurs préfixes, (adresse IP, communauté, destination) :
+	\begin{itemize}
+		\item Une page web dans l'application dédiée à effectuer la recherche des routes selon leurs préfixes.
+	\end{itemize}
+
+\item Lister les routes :
+	\begin{itemize}
+		\item L'utilisateur peut voir toutes les routes qui existent dans la base de données.
+        \item Le résultat sera découpé en plusieurs pages web pour facilité la lisibilité.
+	\end{itemize}
+\end{itemize}    
+
+\subsection{Besoins non fonctionnels}
+
+\begin{itemize}
+\item Une base de données stockant les informations des routes : 
+	\begin{itemize}
+		\item Utiliser une base de données NoSQL(MongoDB)
+	\end{itemize}
+    
+\item Certains packages de meteor.js
+\item Synchronisation du serveur web avec ExaBGP
+\item Sécurité, fiabilité (https...)
+\item Interface différente pour l'admin et l'utilisateur anonyme
+\end{itemize}

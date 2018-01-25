@@ -1,0 +1,23 @@
+\section{Présentation du projet}
+\subsection{Intitulé}
+ L'objectif de ce projet est de développer un outil permettant à un administrateur réseau de définir à distance à partir d'un client Web, des routes menant vers des trous noirs pour dévier des attaques réseaux. Ces routes seront envoyées à un serveur de route qui les diffusera auprès de tous les serveurs BGP du domaine. Le logiciel devra être implémenté en Javascript et du côté serveur il devra piloter le logiciel ExaBGP écrit en Python. L'application Web devra être de type RESTful et elle s'appuiera éventuellement sur un framework JS. Elle devra supporter le routage vers trou noir par la destination, par la source et par la communauté BGP.
+
+
+\subsection{Le routage vers trou noir \cite{Cisco}} 
+
+La déviation des routes vers un trou noir, aussi appelée "Remotely-Triggered Black Hole (RTBH)" en anglais, est une technique qui permet de faire tomber (suspendre) un trafic provenant d'une source étant indésirable, avant que ce dernier puisse entrer dans un réseau protégé.
+\newline
+Cette technique est appliquée sur un routeur BGP( Border Gateway Protocol )qui lui, utilise le protocole TCP afin d'échanger des informations de routage avec des autres routeurs BGP.
+\\
+\\
+Le routage vers trou noir est essentiellement utilisé pour défendre ou proprement dit pour atténuer les attaques DDoS (distributed-denial-of-service). Les trous noirs sont placés principalement dans un réseau pour lequel, on peut dévier et/ou suspendre le trafic lorsque le système détecte une attaque. 
+\newline
+Pour que le système puisse dévier des router, il se base sur l'adresse IP de la destination ou bien de l'adresse IP source. Donc, il existe deux méthodologies :
+\\
+\begin{itemize}
+\item \textbf{Destination-Based Remotely Triggered Black Hole Filtering } : On rend l'adresse IP de la destination inaccessible, en déviant toutes les routes allant à cet adresse vers le trou noir.
+\item \textbf{Source-Based Remotely Triggered Black Hole Filtering }
+: Dans ce scénario, si le trafic provenant d'une adresse IP est susceptible d'être une attaque, alors, tout trafic lié à cet adresse IP serait suspendu. Cela veut dire que selon l'adresse source IP, cette dernière ne peut pas avoir accès à sa destination. En outre, on fait tomber tous les chemins partants d'une adresse IP source précise.   
+\end{itemize}
+
+
