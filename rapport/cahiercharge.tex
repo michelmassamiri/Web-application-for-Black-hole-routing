@@ -5,18 +5,18 @@ Par conséquent, notre application Web s'appuiera sur le framework Meteor JS.
 
 \subsection{Besoins fonctionnels}
 
+\subsubsection{Administrateur}
 \begin{itemize}
-\item Ajouter/Supprimer une route (admin) : 
+\item Ajouter/Supprimer une route : 
 	\begin{itemize}
-		\item L'administrateur réseau peut annoncer un réseau ou une adresse IP.
-        \item L'administrateur réseau peut ainsi supprimer une adresse IP ou un réseau.
-        \item La possibilité d'attribuer une communauté à un router ou bien un réseau lors de l'ajout.
-        \item Les opérations de la suppression et de l'ajout seront réservées à l'administrateur de l'application.
+		\item Annoncer un réseau ou une adresse IP.
+        \item Supprimer une adresse IP ou un réseau.
+        \item Attribuer une communauté à un router ou bien un réseau lors de l'ajout.
 	\end{itemize}
     
-\item Vérifier le bon fonctionnement ExaBGP (admin) :
+\item Vérifier le bon fonctionnement ExaBGP :
 	\begin{itemize}
-		\item À l'aide d'un élément dynamique, l'administrateur peut observer l'état du ExaBGP avant de lancer des commandes.
+		\item À l'aide d'un élément dynamique, Observer l'état du ExaBGP avant de lancer des commandes.
         \item Envoyer un message d'avertissement(popup)quand ExaBGP est en panne ou ne tourne pas.
 	\end{itemize}
     
@@ -27,6 +27,10 @@ Par conséquent, notre application Web s'appuiera sur le framework Meteor JS.
 	\end{itemize}	
 
 \item Relancer ExaBGP (admin)
+\end{itemize}
+
+\subsubsection{Administrateur et client}
+\begin{itemize}
 
 \item Rechercher des routes selon leurs préfixes, (adresse IP, communauté, destination) :
 	\begin{itemize}
