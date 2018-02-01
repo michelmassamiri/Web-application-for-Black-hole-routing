@@ -1,0 +1,28 @@
+---------------------------
+Compte rendu de td du 31/01
+---------------------------
+
+Cahier des charges
+------------------
+
+- Il manque le diagramme d'utilisation , maquette de l'interface web.
+  *Le diagramme d'utilisation nous permettra de bien vérifier si on a tout les besoins fonctionnels.
+
+- Il faut définir les termes plus précisément (définition mathématique).
+
+- Il faut plus de détaille sur l'analyse de l'existant.
+  * Pourquoi on a choisit cette fonctionnalité ou pas en fonction d'un besoins fonctionnel.
+  * Pour Erco.xyz mettre des liens pour pouvoir utiliser la démo oou/et liens d'installation.
+
+- Rajouter un besoin fonctionnel pour développeur.
+  * Virtualisation de la topologie ( router, serveur ).
+  * Cela implique de rajouter dans l'analyse de l'existant tout les outils de virtualisation et descriptions, liensde ses outils. ( NEmu, dynamips, dynagène)
+
+- Il faut plus détailler les besoins fonctionnels et les triés par ordre de priorité.
+
+- Il faut écrire une phrase descrivant chaque figures. Par exemple: une phrase pour le shémas de structure.
+
+- Il manque comme besoins fonctionnels tout les besoins de synchronization entre serveur et les fonctionnalités de communication entre eux, et un status d'utilisateur.
+
+- Il manque aussi dans les beoins non fonctionnels l'obligation d'avoir des scripts en python et d'écrire en javascript l'interface web.
+  
