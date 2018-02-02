@@ -4,7 +4,7 @@
 
 \subsubsection{Définitions}
 
-Les \textbf{routes} sont définit par une adresse IP de destination, d'une adresse IP du prochain routeur (\underline{NextHop}) puis une liste des Systèmes Autonomes traversé (AS).
+Les \textbf{routes} sont définies par: une adresse IP de destination, l'adresse IP du prochain routeur (\underline{NextHop}) puis une liste des Systèmes Autonomes traversés (AS).
 \\
 \\
 Une \textbf{Communauté} est un système Autonomes:\\
@@ -30,10 +30,10 @@ BGP est un protocole de type " Path Vector ". Les routeurs s'échangent des info
 \textbf{Annoncer une route} :
 \newline
 Les routeurs qui forment une connexion TCP afin d'échanger les données de routage BGP, sont des paires('peers') ou voisins('neighbors'). Les BGP 'peers' partagent alors les informations de routage BGP(Table de routage).\newline
-Normalement,  BGP 'peers' mettent à jour leurs table de routage en utilisant la technique \textbf{UPDATE Message}, cela garantit que tous les BGPs aient la même version de la table de routage, et donc le numéro de version change pour tout changement effectué auprès n'importe quel 'peer'.
+Normalement,  BGP 'peers' mettent à jour leurs table de routage en utilisant la technique \textbf{UPDATE Message}, cela garantit que tous les routeurs BGP aient la même version de la table de routage, et donc le numéro de version change pour tout changement effectué auprès de n'importe quel 'peer'.
 
 \pagebreak
-\textbf{Next-Hop}\cite{Routing_BGP} : Cette terme désigne l'adresse IP du prochain routeur auquel le paquet IP devrait être transmis afin que ce paquet IP puisse atteindre sa destination.
+\textbf{Next-Hop}\cite{Routing_BGP} : Ce terme désigne l'adresse IP du prochain routeur auquel le paquet IP devrait être transmis afin que ce paquet IP puisse atteindre sa destination.
 \newline
 Afin d'illustrer le fonctionnement de l'attribut Next Hop, nous détaillons ce dernier sur un exemple :  
 \newline
@@ -43,19 +43,19 @@ Afin d'illustrer le fonctionnement de l'attribut Next Hop, nous détaillons ce d
   Dans ce scénario, si la destination qu'on souhaite atteindre est le réseau : "10.12.0.0/16", donc, tout trafic allant à cette adresse, doit s'orienter vers le routeur "10.6.17.1". Cela veut dire que le prochain routeur (Next-Hop) du "10.12.0.0/16" est le "10.6.17.1".
 \newline
 L'adresse 10.12.0.0/16 est annoncé par le EBGP (External BGP) 10.6.17.1, et donc l'information est passé de la communauté "AS64777" à la "AS649999". Ensuite le UPDATE Message est passé aux voisins par le iBGP(internal BGP) afin que tous les BGP peers gardent la même version de la table de routage. 
-% \textbf{RESTful} : 
-% \\
-% \\
+\\
+\\
+Une API compatible \textbf{REST} (Representational State Transfer) est une interface de programmation d'application qui fait appel à des requêtes HTTP pour obtenir(GET), placer(PUT), publier(POST) et supprimer(DELETE).
 
 \subsection{Le routage vers trou noir \cite{Cisco}} 
 
-La déviation des routes vers un trou noir, aussi appelée "Remotely-Triggered Black Hole (RTBH)" en anglais, est une technique qui permet de faire tomber (suspendre) un trafic provenant d'une source étant indésirable, avant que ce dernier puisse entrer dans un réseau protégé.
+La déviation des routes vers un trou noir, aussi appelée "Remotely-Triggered Black Hole (RTBH)" en anglais, est une technique qui permet de suspendre un trafic provenant d'une source étant indésirable, avant que ce dernier puisse entrer dans un réseau protégé.
 \\
 \\
-Le routage vers trou noir est essentiellement utilisé pour défendre ou proprement dit pour atténuer les attaques DDoS (distributed-denial-of-service). Les trous noirs sont placés principalement dans un réseau pour lequel, on peut dévier et/ou suspendre le trafic lorsque le système détecte une attaque. 
+Le routage vers trou noir est essentiellement utilisé pour défendre ou proprement dit pour atténuer les attaques DDoS ("Distributed Denial Of Service", attaque dont le but est de surcharger le réseau attaqué afin de le ralentir ou de le mettre hors d'usage). Les trous noirs sont placés principalement dans un réseau pour lequel, on peut dévier et/ou suspendre le trafic lorsque le système détecte une attaque. 
 \newline
-Pour que le système puisse dévier des router, il se base sur l'adresse IP de la destination ou bien de l'adresse IP source. Donc, il existe deux méthodologies :
-\\
+Pour que le système puisse dévier des router, il se base sur l'adresse IP de la destination ou bien sur l'adresse IP source. Il existe donc deux méthodes :
+\pagebreak
 \begin{itemize}
 \item \textbf{Destination-Based Remotely Triggered Black Hole Filtering } : On rend l'adresse IP de la destination inaccessible, en déviant toutes les routes allant à cet adresse vers le trou noir.
 \item \textbf{Source-Based Remotely Triggered Black Hole Filtering }
