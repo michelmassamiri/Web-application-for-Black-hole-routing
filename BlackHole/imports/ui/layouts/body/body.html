@@ -1,0 +1,11 @@
+<template name="App_body">
+    {{> Template.dynamic template=main}}
+
+    {{> navBar }}
+
+    <div class="container">
+        {{> yield }}
+    </div>
+
+    {{> footer }}
+</template>
