@@ -1,3 +1,12 @@
 <template name="appContent">
-    <h3>HERE IS THE BODY CORE</h3>
+    <div class="container">
+            {{> listCommand }}
+
+        <div class="content">
+                {{> executeCommand}}
+                {{> addRoute }}
+
+            {{> listRoutes}}
+        </div>
+    </div>
 </template>
