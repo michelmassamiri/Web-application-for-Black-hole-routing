@@ -3,10 +3,16 @@
     font-family: "Glyphicons Halflings";
     src: url("../public/police/glyphicons-halflings-regular.ttf");
 }
+
+html {
+    position: relative;
+    min-height: 100%;
+}
 /****************** Body ************************************/
 body{
     color:#333;
     font-family: "Glyphicons Halfings", Arial, sans-serif;
+    margin-bottom: 60px;
 }
 
 #login-buttons {
