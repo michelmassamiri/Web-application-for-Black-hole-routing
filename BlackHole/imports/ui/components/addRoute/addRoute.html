@@ -1,0 +1,50 @@
+<template name="addRoute">
+    <h3>Annoncer un réseau ou une adresse IP</h3>
+    <form class="form-horizontal">
+
+        <div class="form-group">
+            <label class="col-sm-3 control-label" for="cidr">Adresse IP ou réseau en notation CIDR</label>
+            <div class="col-sm-9">
+                <input id="cidr" class="form-control" name="cidr" placeholder="Adresse IP ou réseau en notation CIDR" required="required" type="text">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3 control-label" for="add-next-hop">Next hop</label>
+            <div class="col-sm-9">
+                <select id="add-next-hop" class="form-control" name="next-hop">
+                    <option value="198.51.100.42">198.51.100.42</option>
+                    <option value="203.0.113.42">203.0.113.42</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3 control-label" for="add-local-pref">Préférence locale</label>
+            <div class="col-sm-9">
+                <input id="add-local-pref" class="form-control" name="local-pref" placeholder="Préférence locale" required="required" type="text">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3 control-label" for="add-communities">Communautés</label>
+            <div class="col-sm-9">
+                <select id="add-communities" class="form-control" multiple="" name="communities" required="required">
+                    <option value="198.51.100.42">198.51.100.42</option>
+                    <option value="203.0.113.42">203.0.113.42</option>
+                </select>
+            </div>
+        </div>
+        <div class="text-right">
+            <a id="submit-btn" class="btn btn-primary" href="#">Lancer</a>
+            <div class="return-message col-md-offset-10">
+                <div>
+                    <pre>
+                      <code id="command-result"></code>
+                    </pre>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</template>
