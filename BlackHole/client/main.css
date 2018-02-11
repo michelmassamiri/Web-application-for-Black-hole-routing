@@ -26,3 +26,8 @@ body{
 #login-buttons a:hover{
     color: cyan;
 }
+
+.return-message {
+    display: block;
+    padding-top: 10px;
+}
