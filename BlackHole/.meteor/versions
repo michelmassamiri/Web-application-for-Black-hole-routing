@@ -48,7 +48,6 @@ iron:url@1.1.0
 johanbrook:publication-collector@1.1.0
 jquery@1.11.11
 kadira:blaze-layout@2.3.0
-kadira:flow-router@2.12.1
 launch-screen@1.1.1
 less@2.7.12
 livedata@1.0.18
