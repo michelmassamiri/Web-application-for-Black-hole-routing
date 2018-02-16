@@ -1,0 +1,112 @@
+<template name="sign_in">
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>{{#if currentUser}}{{showUsername}}{{else}}Connectez-vous{{/if}}</b> <span class="caret"></span></a>
+            <ul id="login-dp" class="dropdown-menu">
+                <li>
+                    <div class="row">
+                        <div class="col-md-12">
+                            {{#if currentUser}}
+                            Déconnexion
+                            <form class="form" role="form" accept-charset="UTF-8" id="logout">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-block">Déconnexion</button>
+                                </div>
+                            </form>
+                            {{else}}
+                            Connexion
+                            <form class="form" role="form" accept-charset="UTF-8" id="login-nav">
+                                <div class="form-group">
+                                    <label class="sr-only" for="exampleInputEmail2">Adresse mail</label>
+                                    <input type="email" class="form-control" id="email-login" placeholder="Adresse mail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="exampleInputPassword2">Mot de passe</label>
+                                    <input type="password" class="form-control" id="password-login" placeholder="Mot de passe" required>
+                                    <div class="help-block text-right"><a href="">Vous avez oublié votre mot de passe ?</a></div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-block">Connexion</button>
+                                </div>
+                            </form>
+                            {{/if}}
+                        </div>
+                        {{#if currentUser}}
+                        {{else}}
+                            <div class="bottom text-center">
+                                Nouveau ici? <a href="{{pathFor route='SignUp'}}"><b>Inscrivez-vous</b></a>
+                            </div>
+                        {{/if}}
+
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</template>
+
+<template name="sign_up">
+    <div class="container">
+        <div class="row">
+            <div class="main-center">
+                <form class="form-horizontal" method="post" action="#" id="sign-up">
+
+                    <h3 style="text-align: center">Entrez vos coordonnées</h3>
+                    <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">Votre prénom et nom</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="name" id="name"  placeholder="Entrez votre prénom suivi de votre nom"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="cols-sm-2 control-label">Votre adresse mail</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="email" id="email"  placeholder="Entrez votre adresse mail"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username" class="cols-sm-2 control-label">Username</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="username" id="username"  placeholder="Entrez votre Username"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="cols-sm-2 control-label">Mot de passe</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="password" class="form-control" name="password" id="password"  placeholder="Entrez votre mot de passe"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm" class="cols-sm-2 control-label">Confirmez votre mot de passe</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Retaper votre mot de passe"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <input type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Inscrivez-vous"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</template>
