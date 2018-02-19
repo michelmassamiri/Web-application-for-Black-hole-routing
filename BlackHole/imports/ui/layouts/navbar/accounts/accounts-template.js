@@ -22,11 +22,7 @@ Template.sign_in.events({
 
       Meteor.loginWithPassword(email, password, function(error){
          if(error) {
-             console.log(error.reason);
-         }
-         else {
-             console.log("Success loged in");
-             //popup message aurait pu être mieux
+             alert(error.reason);
          }
       });
    },
@@ -46,7 +42,7 @@ Template.sign_up.events({
         let email = template.find('#email').value;
         let username = template.find('#username').value;
         let password = template.find('#password').value;
-        let password_verif = template.find('confirm').value;
+        let password_verif = template.find('#confirm').value;
 
         //TODO:check the inserted values
          check(password, String);
@@ -54,7 +50,7 @@ Template.sign_up.events({
          check(name, String);
          check(username, String);
         if(password !== password_verif) {
-            console.log("Failed");
+            alert("Le mot de passe n'est pas le même, veuillez reconfirmer votre de mot de passe");
             return false;
         }
 
